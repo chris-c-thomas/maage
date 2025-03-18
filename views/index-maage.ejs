@@ -6,7 +6,7 @@
 	  </head>
 	<body class="claro patric <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>">
 		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
-			<%- include('bv-brc-header') %>
+			<%- include('navbar') %>
 			<div style="padding:0px;border:0px solid #ddd;" class="bg-[var(--background-color)]">
                 <%- include('home') %>
             </div>

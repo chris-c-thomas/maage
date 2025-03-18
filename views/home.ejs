@@ -79,8 +79,8 @@
 
 <div id="bv-brc-home">
   <div id="maage-home" class="bg-[var(--background-color)]">
-    <div class="maage-home
-      <div id=" bv-brc-home-container">
+    <div class="maage-home">
+      <div id="bv-brc-home-container">
       <div class="maage-home-container mt-[15px]">
 
         <!-- Banner -->
@@ -657,11 +657,6 @@
     </div>
   </main>
 
-  <section style="overflow:hidden;border-color:rgb(228, 228, 231);box-sizing:border-box;border-width:0px;border-style:solid;">
-    <%- include('footer') %>
-  </section>
-
-
 
 
 
@@ -671,8 +666,29 @@
     </div>
   </div>
 
-  <script>
+  <section style="overflow:hidden;border-color:rgb(228, 228, 231);box-sizing:border-box;border-width:0px;border-style:solid;">
+    <%- include('footer') %>
+  </section>
+
+
+  <style>
+    body.patric {
+      min-width: 320px;
+    }
+
+    #p3header-search,
+    #mobile-search-icon {
+      display: none;
+    }
+
+    .home-main-left h1,
+    .home-main-left h2 {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <!-- <script>
     document.getElementById("close-banner").addEventListener("click", function() {
       document.getElementById("maage-banner").style.display = "none";
     });
-  </script>
+  </script> -->
