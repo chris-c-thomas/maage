@@ -3617,3 +3617,11 @@
     div.div-col-span-1-unique-1:nth-child(4)>ul.ul-space-y-2-text-sm-unique-1>li.css_pro-li-variation-4:nth-child(5) {
       font-size: 1rem;
     }
+
+    #maage-banner {
+      color: #fafafa;
+    }
+
+    .home-active-outbreaks .outbreak-card {
+      color: #fafafa;
+    }
