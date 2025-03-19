@@ -109,7 +109,6 @@
 
                 <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
                     <span>Searches</span>
-
                     <div data-dojo-type="p3/widget/TooltipDialog">
                         <div class="menuHeader" style="padding-right: 20px;">Advanced Search</div>
                         <div><a class="navigationLink" href="/searches/TaxaSearch">Taxa</a></div>
@@ -130,15 +129,64 @@
 
                 <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
                     <span>Tools</span>
+                    <div data-dojo-type="p3/widget/TooltipDialog">
+                        <div class="menuHeader" style="padding-right: 20px;">Genomics</div>
+                        <div><a href="/app/Assembly2">Genome Assembly</a></div>
+                        <div><a href="/app/Annotation">Genome Annotation</a></div>
+                        <div><a href="/app/ComprehensiveGenomeAnalysis">Comprehensive Genome Analysis (B)</a></div>
+                        <div><a href="/app/Homology">BLAST</a></div>
+                        <div><a href="/app/GenomeDistance">Similar Genome Finder</a></div>
+
+                        <div class="menuHeader" style="padding-right: 20px;">Phylogenomics</div>
+                        <div><a href="/app/PhylogeneticTree">Bacterial Genome Tree</a></div>
+                        <div><a href="/app/ViralGenomeTree">Viral Genome Tree</a></div>
+                        <div><a href="/app/GeneTree">Gene Protein Tree</a></div>
+
+                        <div class="menuHeader" style="padding-right: 20px;">Protein Tools</div>
+                        <div><a href="/app/MSA">MSA and SNP Analysis</a></div>
+                        <div><a href="/app/SeqComparison">Proteome Comparison</a></div>
+                        <div><a href="/app/ComparativeSystems">Comparative Systems</a></div>
+
+                        <div class="menuHeader" style="padding-right: 20px;">Metagenomics</div>
+                        <div><a href="/app/TaxonomicClassification">Taxonomic Classification</a></div>
+                        <div><a href="/app/MetagenomicBinning">Metagenomic Binning</a></div>
+                        <div><a href="/app/MetagenomicReadMapping">Metagenomic Read Mapping</a></div>
+
+                        <div class="menuHeader" style="padding-right: 20px;">Viral Tools</div>
+                        <div><a href="/app/ComprehensiveSARS2Analysis">SARS-COV-2 Genome Analysis</a></div>
+                        <div><a href="/app/SARS2Wastewater">SARS-CoV-2 Wastewater Analysis</a></div>
+                        <div><a href="/app/SubspeciesClassification">Subspecies Classification</a></div>
+
+                        <div class="menuHeader" style="padding-right: 20px;">Outbreak Trackers</div>
+                        <div><a href="/outbreaks/Mpox/#view_tab=overview">Monkeypox virus</a></div>
+                        <div><a href="/outbreaks/H5N1/#view_tab=overview">Influenza A/H5N1</a></div>
+                        <div><a href="/outbreaks/SARSCoV2/#view_tab=overview">SARS-COV-2</a></div>
+                    </div>
                 </div>
                 <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
                     <span>Workspaces</span>
+                    <div data-dojo-type="p3/widget/TooltipDialog">
+                        <div class="menuHeader" style="padding-right: 20px;">My Data</div>
+                        <div><a href="/job">My Jobs</a></div>
+                        <div><a href="view/GenomeList/?eq(public,false)">My Genomes</a></div>
+                        <div><a href="view/GenomeList/?eq(public,false)">My BioProjects</a></div>
+                        <div class="menuHeader" style="padding-right: 20px;">Public Data</div>
+                        <div><a href="#">MAAGE Genomes</a></div>
+                        <div><a href="#">MAAGE BioProjects</a></div>
+                    </div>
                 </div>
-                <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
+                <!-- <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
                     <span>Docs</span>
-                </div>
+                </div> -->
                 <div class="topMenuButton showOnLoad dijitHidden" data-dojo-type="dijit/form/DropDownButton">
                     <span>About</span>
+                    <div data-dojo-type="p3/widget/TooltipDialog">
+                        <div class="menuHeader" style="padding-right: 20px;">MAAGE</div>
+                        <div><a href="/about">About Us</a></div>
+                        <div><a href="/team">Team Members</a></div>
+                        <div><a href="/advisory-boards">Advisory Boards</a></div>
+                        <div><a href="#">Contact Us</a></div>
+                    </div>
                 </div>
             </div>
 
