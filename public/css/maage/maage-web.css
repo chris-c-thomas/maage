@@ -3625,3 +3625,12 @@
     .home-active-outbreaks .outbreak-card {
       color: #fafafa;
     }
+
+    #bv-brc-home,
+    #bv-brc-page {
+    box-sizing: border-box;
+    margin: 0!important;
+    padding: 0!important;
+    background: var(--maage-background);
+    font-family: 'Inter', sans-serif
+}
