@@ -9,6 +9,11 @@
 	  }
 	</script>
 
+<script>
+	// Initialize Lucide icons
+	lucide.createIcons();
+</script>
+
 	<!-- Scripts -->
 	<%
 	const load_scripts = [
@@ -29,22 +34,43 @@
 	  <% }) %>
 	<% } %>
 
-	<!-- // use bundle.js
-	<script type="text/javascript" src="/js/cytoscape/dist/cytoscape.min.js"></script>
-	<script type="text/javascript" src="/js/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/webcola/WebCola/cola.min.js"></script>
-	<script type="text/javascript" src="/js/dagre/dist/dagre.min.js"></script>
-	<script type="text/javascript" src="/js/cytoscape-cose-bilkent/cytoscape-cose-bilkent.js"></script>
-	-->
+	<script type="text/javascript">
+	  function toggleMenu() {
+		const hamburgerButton = document.querySelector('.hamburger-icon');
+		const menu = document.getElementById("mobile-navbar");
 
-	<% if (request && request.production){ %>
+		hamburgerButton.classList.toggle('open');
+		menu.classList.toggle("hidden");
+	  }
+
+	  function toggleSubMenu(header) {
+		const subMenu = header.nextElementSibling; // Get the the sub-menu
+		const icon = header.querySelector('.icon-chevron-down');
+
+		if (subMenu.style.display === "block") {
+		  header.classList.remove('open');
+		  subMenu.style.display = "none";
+		  icon.classList.remove('open');
+		} else {
+		  header.classList.add('open');
+		  subMenu.style.display = "block";
+		  icon.classList.add('open');
+		}
+	  }
+
+	  function toggleSearch() {
+		const searchButton = document.querySelector('.search-icon');
+		const searchbar = document.getElementById("mobile-searchbar");
+
+		searchButton.classList.toggle('open');
+		searchbar.classList.toggle("hidden");
+	  }
+	</script>
+
+	<% if (request && request.production) { %>
 	  <script src="/js/<%- request.package.version %>/dojo/dojo.js"></script>
 	  <script>
-	  require(<%- JSON.stringify(request.productionLayers) %>, function(){
-		<% } else { %>
-		  <script src="/js/dojo/dojo.js"></script>
-		  <script>
-		  <% } %>
+		require(<%- JSON.stringify(request.productionLayers) %>, function(){
 		  require(["<%= request.applicationModule %>"], function(App){
 			appOpts = <%- JSON.stringify(request.applicationOptions || {}) %>;
 			appOpts.workspaceAPI = "<%= request.applicationOptions.workspaceServiceURL %>";
@@ -55,10 +81,23 @@
 			appOpts.localStorageCheckInterval = "<%= request.applicationOptions.localStorageCheckInterval %>";
 			window.App = new App(appOpts);
 		  });
-		  <% if (request && request.production){ %>
-		  });
-		  <% } %>
-		  </script>
+		});
+	  </script>
+	<% } else { %>
+	  <script src="/js/dojo/dojo.js"></script>
+	  <script>
+		require(["<%= request.applicationModule %>"], function(App){
+		  appOpts = <%- JSON.stringify(request.applicationOptions || {}) %>;
+		  appOpts.workspaceAPI = "<%= request.applicationOptions.workspaceServiceURL %>";
+		  appOpts.serviceAPI = "<%= request.applicationOptions.appServiceURL %>";
+		  appOpts.dataAPI = "<%= request.applicationOptions.dataServiceURL %>";
+		  appOpts.userServiceURL = "<%= request.applicationOptions.userServiceURL %>";
+		  appOpts.mailinglistURL = "<%= request.applicationOptions.mailinglistURL %>";
+		  appOpts.localStorageCheckInterval = "<%= request.applicationOptions.localStorageCheckInterval %>";
+		  window.App = new App(appOpts);
+		});
+	  </script>
+	<% } %>
 		  <!-- Google Analytics 4 -->
 		  <% if (request && request.applicationOptions.gaID) { %>
 			<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -73,3 +112,5 @@
 			});
 			</script>
 			<% } %>
+
+			<script src="./public/js/maage/maage-web.js"></script>

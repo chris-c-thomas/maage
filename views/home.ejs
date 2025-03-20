@@ -1,76 +1,4 @@
-<script>
-  tailwind.config = {
-    darkMode: ["class"],
-    theme: {
-      container: {
-        center: true,
-        padding: "2rem",
-        screens: {
-          "2xl": "1400px",
-        },
-      },
-      extend: {
-        colors: {
-          border: "hsl(var(--border))",
-          input: "hsl(var(--input))",
-          ring: "hsl(var(--ring))",
-          background: "hsl(var(--background))",
-          foreground: "hsl(var(--foreground))",
-          primary: {
-            DEFAULT: "#a6c9b8",
-            50: "#f2f8f5",
-            100: "#deede4",
-            200: "#bfd9cb",
-            300: "#a6c9b8",
-            400: "#89b8a3",
-            500: "#65a48a",
-            600: "#488970",
-            700: "#3e7561",
-            800: "#376755",
-            900: "#305a4c",
-            950: "#24423a",
-          },
-          secondary: {
-            DEFAULT: "#649baf",
-            50: "#f1f7f9",
-            100: "#dceaef",
-            200: "#c2d9e0",
-            300: "#a0c3cf",
-            400: "#71a3b7",
-            500: "#548fa6",
-            600: "#447188",
-            700: "#406477",
-            800: "#395160",
-            900: "#314654",
-            950: "#24333d",
-          },
-          maage: {
-            primary: "#a6c9b8",
-            secondary: "#649baf",
-            tertiary: "#8279a1",
-            gray: {
-              50: "#f6f6f6",
-              100: "#ededed",
-              200: "#dbdbdb",
-              300: "#c9c9c9",
-              400: "#adadad",
-              500: "#8f8f8f",
-              600: "#757575",
-              700: "#595959",
-              800: "#454545",
-              900: "#333333",
-              950: "#262626",
-            },
-          },
-        },
-        fontFamily: {
-          poppins: ["Poppins", "sans-serif"],
-          inter: ["Inter", "sans-serif"],
-        },
-      },
-    },
-  }
-</script>
+
 
 
 
@@ -291,25 +219,25 @@
               </div>
               <ul class="space-y-2.5">
                 <li class="flex items-center">
-                  <i data-lucide="server" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="server" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="/workspace/" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     Workspace
                   </a>
                 </li>
                 <li class="flex items-center">
-                  <i data-lucide="save" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="save" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="/workspace/groups" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     Genome Groups
                   </a>
                 </li>
                 <li class="flex items-center">
-                  <i data-lucide="upload" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="upload" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="/workspaces/jobs" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     Analysis Jobs
                   </a>
                 </li>
                 <li class="flex items-center">
-                  <i data-lucide="clock" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="clock" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="/workspace/bioprojects" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     BioProjects
                   </a>
@@ -325,19 +253,19 @@
               </div>
               <ul class="space-y-2.5">
                 <li class="flex items-center">
-                  <i data-lucide="terminal" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="terminal" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="#" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     CLI
                   </a>
                 </li>
                 <li class="flex items-center">
-                  <i data-lucide="code" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="code" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="#" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     API
                   </a>
                 </li>
                 <li class="flex items-center">
-                  <i data-lucide="download" class="h-4 w-4 text-primary-600 text-md mr-2 flex-shrink-0"></i>
+                  <i data-lucide="download" class="h-4 w-4 text-primary-600 mr-2 flex-shrink-0"></i>
                   <a href="#" class="text-gray-700 hover:text-secondary-600 transition-colors">
                     FTP
                   </a>
@@ -405,7 +333,7 @@
 
                   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Mpox Card -->
-                    <div class="outbreak-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-md transition-all">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 hover:shadow-md transition-all">
                       <div class="bg-[var(--maage-secondary-500)] p-4 text-white">
                         <div class="flex justify-between items-center">
                           <h3 class="text-lg font-semibold text-[#fafafa]">Mpox</h3>
@@ -676,11 +604,6 @@
     #p3header-search,
     #mobile-search-icon {
       display: none;
-    }
-
-    .home-main-left h1,
-    .home-main-left h2 {
-      margin-bottom: 0;
     }
   </style>
 
