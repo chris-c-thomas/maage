@@ -1,291 +1,3688 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Advisory Boards | MAAGE - Midwest Alliance for Applied Epidemiology</title>
-        <%- include('../head') %>
-    </head>
-    <body class="claro patric <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>"></body>
-		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
-			<%- include('../navbar') %>
-            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px solid #ddd;background:inherit;">
-                <div id="maage-page">
-                    <div id="maage-container">
-                        <div class="page-content">
-                            <main class="container mx-auto px-4 py-8">
-                                <h1 class="text-4xl font-semibold text-center mb-12 text-gray-800">Advisory Boards</h1>
-                                <section class="mb-16">
-                                    <h2 class="text-3xl font-semibold text-left mb-8 text-primary">Clinical Advisory Board</h2>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-36.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Ashley Ceniceros</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Infectious diseases, wound care, and outpatient internal medicine physician, Clinical Assistant Professor</p>
-                                            <p class="text-sm text-gray-500">Carle Foundation Hospital</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-37.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 mb-2 font-semibold text-primary">Marielle Fricchione</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Associate Professor of Pediatrics, Pediatric Infectious Diseases Attending</p>
-                                            <p class="text-sm text-gray-500">Rush University Medical Center</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-38.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Rajinder Grewal</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Medical Director</p>
-                                            <p class="text-sm text-gray-500">Centene Corporation</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Mary Hayden</h3>
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-39.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Director, Division of Infectious Diseases; Director of Clinical Microbiology Lab</p>
-                                            <p class="text-sm text-gray-500">Rush University Medical Center</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-40.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Hend Jadalla</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Graduate Assistant at the Center for Rural Health and Social Services Development</p>
-                                            <p class="text-sm text-gray-500"> Southern Illinois University School of Medicine</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-41.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Harish Kempegowda</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Attending Physician, Orthopedic and Spide Surgery</p>
-                                            <p class="text-sm text-gray-500">Horizon Health</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-42.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Larry Kociolik</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">                                        <br>Associate Professor of Pediatrics, Vice President, System Preparedness, Prevention, and Response, Attending Physician, Division of Infectious Diseases, Northwestern University Feinberg School of Medicine,</p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-43.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Anum Niazi</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Hospitalist, National Hospital Medical Lead Advocacy Coordinator, Vituity</p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-44.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Lorna O'Young</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Owner/Solo practitioner of Ob/Gyn practice; retired, Woman to Woman, P.C.</p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-45.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Egon Ozer</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Assistant Professor of Medicine, Infectious Diseases and Director, Center for Pathogen Genomics and Microbial Evolution, Northwestern University Feinberg School of Medicine</p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-46.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Sarah Sansom</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Assistant Professor, Division of Infectious Diseases, Rush University Medical Center</p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-47.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Jitendra Kumar Sodvadiya</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Horizon Health</p>
-                                            <p class="text-sm text-gray-500">Horizon Health</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-primary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-48.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-primary">Jayme Walker</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Hospitalist Practitioner</p>
-                                            <p class="text-sm text-gray-500">Rush Copley</p>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <h2 class="text-3xl font-semibold text-left mb-8 text-secondary">Public Health Advisory Board</h2>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-49.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Chloe Cavida</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Epidemiologist</p>
-                                            <p class="text-sm text-gray-500">McHenry County Department of Health</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-50.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Robert Davies</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Director of Planning and Research</p>
-                                            <p class="text-sm text-gray-500">Champaign-Urbana Public Health District</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-51.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Prince Danso-Odei</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Administrator and Health Officer</p>
-                                            <p class="text-sm text-gray-500">Vermilion County Health Department</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-52.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Lauren Eckberg</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4"></p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-53.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Katy Endress</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4"></p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-54.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Brenda Fedak</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Organizational Communications Manager/PIO/HR</p>
-                                            <p class="text-sm text-gray-500">Health Department St. Clair County</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-55.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Sarah Franks</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">RN Communicable Disease Surveillance Specialist High Risk Populations</p>
-                                            <p class="text-sm text-gray-500">Evanston Health and Human Services</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-56.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Megan Hanley</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Epidemiologist</p>
-                                            <p class="text-sm text-gray-500">Tazewell County Health Department</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-57.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Heidi Heerdt</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Registered Nurse</p>
-                                            <p class="text-sm text-gray-500">Bureau County Health Department</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-58.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Monica Hendrickson</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4"></p>
-                                            <p class="text-sm text-gray-500"></p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-59.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Chris Hoff</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Deputy Director, Public Health</p>
-                                            <p class="text-sm text-gray-500">DuPage County Health Department</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-60.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Christine Pate</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Hektoen Institute of Medicine (IDPH)</p>
-                                            <p class="text-sm text-gray-500">Hektoen Institute of Medicine (IDPH)</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-47.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Tracy Terlinde</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Peoria City/County Health Department</p>
-                                            <p class="text-sm text-gray-500">Peoria City/County Health Department</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-49.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Yvonne Overton</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Chae Li Yong</p>
-                                            <p class="text-sm text-gray-500">Illinois Department of Public Health</p>
-                                        </div>
-                                        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border-t-4 border-secondary advisor-card">
-                                            <div class="flex flex-col items-center text-center mb-4">
-                                                <img src="/public/maage/profile/placeholder/prof-pic-50.svg" alt="" class="rounded-full mb-2 w-[100px] h-[100px]">
-                                            </div>
-                                            <h3 class="text-xl mb-2 font-semibold text-secondary">Chae Li Yong</h3>
-                                            <div class="w-10 h-1 bg-[#64939a]"></div>
-                                            <p class="text-gray-600 mt-4">Epidemiology</p>
-                                            <p class="text-sm text-gray-500">Madison County Health Department</p>
-                                        </div>
-                                    </div>
-                                </section>
-                            </main>
-                    </div>
-                </div>
-                <%- include('../footer') %>) %>) %>
-                <style>
-                    body.patric {
-                        min-width: 830px;
-                    }
-                </style>
+<html>
+
+<head>
+    <style>
+        .style-0 {
+            cursor: auto;
+            --font-poppins: 'Poppins', 'Poppins Fallback';
+            --font-inter: 'Inter', 'Inter Fallback';
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            background-color: rgb(249, 250, 251);
+            color: rgb(17, 24, 39);
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.2s;
+            animation-duration: 0.2s;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            line-height: 24px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-1 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-2 {
+            background-color: rgb(248, 250, 249);
+            border-color: rgb(232, 240, 236);
+            border-bottom-width: 1px;
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-4 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-5 {
+            color: rgb(100, 155, 175);
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(100, 155, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-6 {
+            color: rgb(156, 163, 175);
+            margin-left: 8px;
+            margin-right: 8px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-7 {
+            color: rgb(100, 155, 175);
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(100, 155, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-8 {
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(229, 231, 235);
+            border-bottom-width: 1px;
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-9 {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-10 {
+            overflow-x: auto;
+            display: flex;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-11 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-color: rgba(0, 0, 0, 0);
+            border-bottom-width: 2px;
+            white-space: nowrap;
+            color: rgb(17, 24, 39);
+            text-decoration: none solid rgb(17, 24, 39);
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-12 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-color: rgba(0, 0, 0, 0);
+            border-bottom-width: 2px;
+            white-space: nowrap;
+            color: rgb(17, 24, 39);
+            text-decoration: none solid rgb(17, 24, 39);
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-13 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-color: rgba(0, 0, 0, 0);
+            border-bottom-width: 2px;
+            white-space: nowrap;
+            color: rgb(17, 24, 39);
+            text-decoration: none solid rgb(17, 24, 39);
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-14 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-color: rgba(0, 0, 0, 0);
+            border-bottom-width: 2px;
+            white-space: nowrap;
+            color: rgb(17, 24, 39);
+            text-decoration: none solid rgb(17, 24, 39);
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-15 {
+            background-color: rgb(255, 255, 255);
+            min-height: 828px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-16 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+            --tw-gradient-to: rgba(232, 240, 236, .7) 1;
+            --tw-gradient-from: #e8f0ec 1;
+            background-image: linear-gradient(to right, rgb(232, 240, 236), rgba(232, 240, 236, 0.7));
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-17 {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-18 {
+            max-width: 896px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-19 {
+            font-size: 48px;
+            line-height: 48px;
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 700;
+            margin-bottom: 24px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 24px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-20 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            line-height: 32.5px;
+            font-size: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-21 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(229, 231, 235);
+            border-bottom-width: 1px;
+            z-index: 10;
+            top: 0px;
+            position: sticky;
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-22 {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-23 {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            overflow-x: auto;
+            gap: 16px;
+            display: flex;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-24 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 500;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background-color: rgba(166, 201, 184, 0.1);
+            border-radius: 6px;
+            white-space: nowrap;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(44, 62, 80);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-25 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 500;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background-color: rgba(84, 143, 166, 0.1);
+            border-radius: 6px;
+            white-space: nowrap;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(44, 62, 80);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-26 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 500;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background-color: rgba(236, 193, 136, 0.1);
+            border-radius: 6px;
+            white-space: nowrap;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(44, 62, 80);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-27 {
+            padding-top: 64px;
+            padding-bottom: 64px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-28 {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-29 {
+            padding-bottom: 16px;
+            border-color: rgb(229, 231, 235);
+            border-bottom-width: 1px;
+            align-items: center;
+            display: flex;
+            margin-bottom: 32px;
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-30 {
+            background-color: rgba(166, 201, 184, 0.2);
+            border-radius: 9999px;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 48px;
+            display: flex;
+            margin-right: 16px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-31 {
+            color: rgb(166, 201, 184);
+            width: 1.5rem;
+            height: 24px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-32 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-33 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-34 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-35 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-36 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-37 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-38 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-39 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-40 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-41 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-42 {
+            grid-template-columns: 294px 294px 294px 294px;
+            gap: 24px;
+            display: grid;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-43 {
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 2px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 258px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-44 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-45 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-46 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-47 {
+            color: rgb(166, 201, 184);
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            top: 12px;
+            right: 12px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-48 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-49 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-50 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-51 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-52 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-53 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-54 {
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-55 {
+            display: flex;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-56 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-57 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-58 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-59 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-60 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            margin-right: 0px;
+            margin-left: 12px;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-61 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-62 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-63 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-64 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-65 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 258px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-66 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-67 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-68 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-69 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-70 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-71 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-72 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-73 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-74 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-75 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 258px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-76 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-77 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-78 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-79 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-80 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-81 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-82 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-83 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-84 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-85 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 258px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-86 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-87 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-88 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-89 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-90 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-91 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-92 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-93 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-94 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-95 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-96 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-97 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-98 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-99 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-100 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-101 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-102 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-103 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-104 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-105 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-106 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-107 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-108 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-109 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-110 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-111 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-112 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-113 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-114 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-115 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-116 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-117 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-118 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-119 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-120 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-121 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-122 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-123 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-124 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-125 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-126 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-127 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-128 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-129 {
+            background-color: rgb(166, 201, 184);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-130 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-131 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-132 {
+            color: rgb(166, 201, 184);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-133 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-134 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-135 {
+            padding-top: 64px;
+            padding-bottom: 64px;
+            background-color: rgb(248, 250, 249);
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-136 {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-137 {
+            padding-bottom: 16px;
+            border-color: rgb(229, 231, 235);
+            border-bottom-width: 1px;
+            align-items: center;
+            display: flex;
+            margin-bottom: 32px;
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-138 {
+            background-color: rgba(84, 143, 166, 0.2);
+            border-radius: 9999px;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 48px;
+            display: flex;
+            margin-right: 16px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-139 {
+            color: rgb(84, 143, 166);
+            width: 1.5rem;
+            height: 24px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-140 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-141 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-142 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-143 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-144 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-145 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-146 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-147 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-148 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-149 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-150 {
+            grid-template-columns: 230.398px 230.398px 230.398px 230.398px 230.398px;
+            gap: 24px;
+            display: grid;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-151 {
+            grid-column: span 1 / span 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-152 {
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 2px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 314px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-153 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-154 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-155 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-156 {
+            color: rgb(84, 143, 166);
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            top: 12px;
+            right: 12px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-157 {
+            background-color: rgb(84, 143, 166);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-158 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-159 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-160 {
+            color: rgb(84, 143, 166);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-161 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-162 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-163 {
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-164 {
+            display: flex;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-165 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-166 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-167 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-168 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-169 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            margin-right: 0px;
+            margin-left: 12px;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-170 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-171 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-172 {
+            grid-column: span 1 / span 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-173 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 314px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-174 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-175 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-176 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-177 {
+            background-color: rgb(84, 143, 166);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-178 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-179 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-180 {
+            color: rgb(84, 143, 166);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-181 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-182 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-183 {
+            grid-column: span 1 / span 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-184 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 314px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-185 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-186 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-187 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-188 {
+            background-color: rgb(84, 143, 166);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-189 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-190 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-191 {
+            color: rgb(84, 143, 166);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-192 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-193 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-194 {
+            grid-column: span 1 / span 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-195 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 314px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-196 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-197 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-198 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-199 {
+            background-color: rgb(84, 143, 166);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-200 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-201 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-202 {
+            color: rgb(84, 143, 166);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-203 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-204 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-205 {
+            grid-column: span 1 / span 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-206 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 314px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-207 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-208 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-209 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-210 {
+            background-color: rgb(84, 143, 166);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-211 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-212 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-213 {
+            color: rgb(84, 143, 166);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-214 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-215 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-216 {
+            padding-top: 64px;
+            padding-bottom: 64px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-217 {
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-218 {
+            padding-bottom: 16px;
+            border-color: rgb(229, 231, 235);
+            border-bottom-width: 1px;
+            align-items: center;
+            display: flex;
+            margin-bottom: 32px;
+            box-sizing: border-box;
+            border: 0px solid rgb(229, 231, 235);
+        }
+
+        .style-219 {
+            background-color: rgba(236, 193, 136, 0.2);
+            border-radius: 9999px;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 48px;
+            display: flex;
+            margin-right: 16px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-220 {
+            color: rgb(236, 193, 135);
+            width: 1.5rem;
+            height: 24px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-221 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-222 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-223 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-224 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-225 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-226 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-227 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-228 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-229 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-230 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-231 {
+            grid-template-columns: 400px 400px 400px;
+            gap: 24px;
+            display: grid;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-232 {
+            box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(59, 130, 246, 0.5) 0px 0px 0px 2px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 218px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-233 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-234 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-235 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-236 {
+            color: rgb(236, 193, 135);
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            top: 12px;
+            right: 12px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-237 {
+            background-color: rgb(236, 193, 135);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-238 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-239 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-240 {
+            color: rgb(236, 193, 135);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-241 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-242 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-243 {
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-244 {
+            display: flex;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-245 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-246 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-247 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-248 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-249 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            margin-right: 0px;
+            margin-left: 12px;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-250 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-251 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-252 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-253 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-254 {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(156, 163, 175);
+            margin-right: 0px;
+            margin-left: 12px;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(156, 163, 175);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-255 {
+            width: 1.25rem;
+            height: 20px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-256 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-257 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-258 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 218px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-259 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-260 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-261 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-262 {
+            background-color: rgb(236, 193, 135);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-263 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-264 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-265 {
+            color: rgb(236, 193, 135);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-266 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-267 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-268 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 218px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-269 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-270 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-271 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-272 {
+            background-color: rgb(236, 193, 135);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-273 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-274 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-275 {
+            color: rgb(236, 193, 135);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-276 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-277 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-278 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-279 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-280 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-281 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-282 {
+            background-color: rgb(236, 193, 135);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-283 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-284 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-285 {
+            color: rgb(236, 193, 135);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-286 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-287 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-288 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-289 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-290 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-291 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-292 {
+            background-color: rgb(236, 193, 135);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-293 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-294 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-295 {
+            color: rgb(236, 193, 135);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-296 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-297 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-298 {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+            background-color: rgb(255, 255, 255);
+            border-color: rgb(243, 244, 246);
+            border-width: 1px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+            height: 178px;
+            display: flex;
+            box-sizing: border-box;
+            border: 1px solid rgb(243, 244, 246);
+        }
+
+        .style-299 {
+            position: relative;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-300 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-301 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0px;
+            color: transparent;
+            height: 0px;
+            width: 100%;
+            inset: 0px;
+            color: rgba(0, 0, 0, 0);
+            object-fit: cover;
+            border-color: rgb(226, 232, 240);
+            max-width: 100%;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-302 {
+            background-color: rgb(236, 193, 135);
+            height: 4px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-303 {
+            padding: 20px;
+            flex-grow: 1;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-304 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            color: rgb(44, 62, 80);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-305 {
+            color: rgb(236, 193, 135);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-306 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(107, 114, 128);
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 12px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-307 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            color: rgb(74, 85, 104);
+            font-size: 14px;
+            line-height: 20px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-308 {
+            color: rgb(255, 255, 255);
+            padding-top: 64px;
+            padding-bottom: 64px;
+            --tw-gradient-to: #3d677d 1;
+            --tw-gradient-from: #548fa6 1;
+            background-image: linear-gradient(to right, rgb(84, 143, 166), rgb(61, 103, 125));
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-309 {
+            text-align: center;
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-310 {
+            font-family: Poppins, 'Poppins Fallback', sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 24px;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 0px 24px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-311 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 768px;
+            margin-bottom: 32px;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgb(226, 232, 240);
+            margin: 0px 240px 32px;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-312 {
+            font-family: Inter, 'Inter Fallback', sans-serif;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.15s;
+            color: rgb(84, 143, 166);
+            font-weight: 500;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 24px;
+            padding-right: 24px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            align-items: center;
+            display: inline-flex;
+            border-color: rgb(226, 232, 240);
+            text-decoration: none solid rgb(84, 143, 166);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-313 {
+            width: 1.25rem;
+            height: 20px;
+            margin-left: 8px;
+            border-color: rgb(226, 232, 240);
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-314 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-315 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-316 {
+            position: absolute;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-317 {
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+        }
+
+        .style-318 {
+            display: flex;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-color: rgb(226, 232, 240);
+            box-sizing: border-box;
+            border: 0px solid rgb(226, 232, 240);
+        }
+
+        .style-319 {
+            border-color: rgb(17, 24, 39);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="style-0" cz-shortcut-listen="true">
+    <div class="style-1">
+        <div class="style-8">
+            <div class="style-9">
+                <nav class="style-10"><a class="style-11" href="/about">About Us</a><a class="style-12" href="/team">Team Members</a><a class="style-13" href="/advisory-boards">Advisory Boards</a><a class="style-14" href="/contact">Contact Us</a></nav>
             </div>
         </div>
-		<%- include('../javascript') %>
-	</body>
+        <main class="style-15">
+            <div class="style-16">
+                <div class="style-17">
+                    <div class="style-18">
+                        <h1 class="style-19">Our Team</h1>
+                        <p class="style-20">Meet the dedicated professionals behind MAAGE who are working to advance genomic surveillance and epidemiological research across the Midwest. Our multidisciplinary team brings together expertise from three leading organizations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="style-21">
+                <div class="style-22">
+                    <div class="style-23"><a href="#argonne" class="style-24">Argonne National Laboratory</a><a href="#idph" class="style-25">Illinois Department of Public Health</a><a href="#uiuc" class="style-26">University of Illinois</a></div>
+                </div>
+            </div>
+            <section class="style-27">
+                <div class="style-28">
+                    <div class="style-29">
+                        <div class="style-30"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-31">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" class="style-32"></path>
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" class="style-33"></path>
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" class="style-34"></path>
+                                <path d="M10 6h4" class="style-35"></path>
+                                <path d="M10 10h4" class="style-36"></path>
+                                <path d="M10 14h4" class="style-37"></path>
+                                <path d="M10 18h4" class="style-38"></path>
+                            </svg></div>
+                        <div class="style-39">
+                            <h2 class="style-40">Argonne National Laboratory</h2>
+                            <p class="style-41">Computational and data science experts</p>
+                        </div>
+                    </div>
+                    <div class="style-42">
+                        <div class="style-43">
+                            <div class="style-44">
+                                <div class="style-45"><img alt="Tom Brettin" loading="lazy" decoding="async" data-nimg="fill" class="style-46" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-47">Principal Investigator</div>
+                                <div class="style-48"></div>
+                            </div>
+                            <div class="style-49">
+                                <h3 class="style-50">Tom Brettin</h3>
+                                <p class="style-51">Strategic Program Manager</p>
+                                <p class="style-52">Argonne National Laboratory</p>
+                                <p class="style-53">Thomas leads MAAGE's computational initiatives, coordinating multi-disciplinary teams and leveraging advanced resources for genomic surveillance projects.</p>
+                            </div>
+                            <div class="style-54">
+                                <div class="style-55"><a href="mailto:tbrettin@anl.gov" class="style-56" aria-label="Email Tom Brettin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-57">
+                                            <rect width="20" height="16" x="2" y="4" rx="2" class="style-58"></rect>
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" class="style-59"></path>
+                                        </svg></a><a href="https://www.linkedin.com/in/tom-brettin" target="_blank" rel="noopener noreferrer" class="style-60" aria-label="Tom Brettin's LinkedIn profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-61">
+                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" class="style-62"></path>
+                                            <rect width="4" height="12" x="2" y="9" class="style-63"></rect>
+                                            <circle cx="4" cy="4" r="2" class="style-64"></circle>
+                                        </svg></a></div>
+                            </div>
+                        </div>
+                        <div class="style-65">
+                            <div class="style-66">
+                                <div class="style-67"><img alt="Jennifer Chen" loading="lazy" decoding="async" data-nimg="fill" class="style-68" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-69"></div>
+                            </div>
+                            <div class="style-70">
+                                <h3 class="style-71">Jennifer Chen</h3>
+                                <p class="style-72">Senior Computational Biologist</p>
+                                <p class="style-73">Argonne National Laboratory</p>
+                                <p class="style-74">Jennifer specializes in developing algorithms for pathogen genome analysis and variant detection.</p>
+                            </div>
+                        </div>
+                        <div class="style-75">
+                            <div class="style-76">
+                                <div class="style-77"><img alt="Michael Rodriguez" loading="lazy" decoding="async" data-nimg="fill" class="style-78" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-79"></div>
+                            </div>
+                            <div class="style-80">
+                                <h3 class="style-81">Michael Rodriguez</h3>
+                                <p class="style-82">Data Science Lead</p>
+                                <p class="style-83">Argonne National Laboratory</p>
+                                <p class="style-84">Michael oversees data management and integration systems for MAAGE's genomic surveillance platform.</p>
+                            </div>
+                        </div>
+                        <div class="style-85">
+                            <div class="style-86">
+                                <div class="style-87"><img alt="Sarah Johnson" loading="lazy" decoding="async" data-nimg="fill" class="style-88" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-89"></div>
+                            </div>
+                            <div class="style-90">
+                                <h3 class="style-91">Sarah Johnson</h3>
+                                <p class="style-92">Bioinformatics Specialist</p>
+                                <p class="style-93">Argonne National Laboratory</p>
+                                <p class="style-94">Sarah develops pipelines for processing and analyzing large-scale genomic sequencing data.</p>
+                            </div>
+                        </div>
+                        <div class="style-95">
+                            <div class="style-96">
+                                <div class="style-97"><img alt="David Kim" loading="lazy" decoding="async" data-nimg="fill" class="style-98" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-99"></div>
+                            </div>
+                            <div class="style-100">
+                                <h3 class="style-101">David Kim</h3>
+                                <p class="style-102">HPC Systems Engineer</p>
+                                <p class="style-103">Argonne National Laboratory</p>
+                                <p class="style-104">David manages the high-performance computing infrastructure that powers MAAGE's genomic analysis tools.</p>
+                            </div>
+                        </div>
+                        <div class="style-105">
+                            <div class="style-106">
+                                <div class="style-107"><img alt="Lisa Patel" loading="lazy" decoding="async" data-nimg="fill" class="style-108" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-109"></div>
+                            </div>
+                            <div class="style-110">
+                                <h3 class="style-111">Lisa Patel</h3>
+                                <p class="style-112">AI/ML Researcher</p>
+                                <p class="style-113">Argonne National Laboratory</p>
+                                <p class="style-114">Lisa applies machine learning techniques to identify patterns in pathogen evolution and transmission.</p>
+                            </div>
+                        </div>
+                        <div class="style-115">
+                            <div class="style-116">
+                                <div class="style-117"><img alt="Robert Chang" loading="lazy" decoding="async" data-nimg="fill" class="style-118" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-119"></div>
+                            </div>
+                            <div class="style-120">
+                                <h3 class="style-121">Robert Chang</h3>
+                                <p class="style-122">Software Developer</p>
+                                <p class="style-123">Argonne National Laboratory</p>
+                                <p class="style-124">Robert builds user-friendly interfaces and tools for accessing and visualizing genomic surveillance data.</p>
+                            </div>
+                        </div>
+                        <div class="style-125">
+                            <div class="style-126">
+                                <div class="style-127"><img alt="Emily Nguyen" loading="lazy" decoding="async" data-nimg="fill" class="style-128" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-129"></div>
+                            </div>
+                            <div class="style-130">
+                                <h3 class="style-131">Emily Nguyen</h3>
+                                <p class="style-132">Computational Genomics Researcher</p>
+                                <p class="style-133">Argonne National Laboratory</p>
+                                <p class="style-134">Emily focuses on developing methods for rapid identification of emerging pathogen variants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="style-135">
+                <div class="style-136">
+                    <div class="style-137">
+                        <div class="style-138"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-139">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" class="style-140"></path>
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" class="style-141"></path>
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" class="style-142"></path>
+                                <path d="M10 6h4" class="style-143"></path>
+                                <path d="M10 10h4" class="style-144"></path>
+                                <path d="M10 14h4" class="style-145"></path>
+                                <path d="M10 18h4" class="style-146"></path>
+                            </svg></div>
+                        <div class="style-147">
+                            <h2 class="style-148">Illinois Department of Public Health</h2>
+                            <p class="style-149">Public health and epidemiology specialists</p>
+                        </div>
+                    </div>
+                    <div class="style-150">
+                        <div class="style-151">
+                            <div class="style-152">
+                                <div class="style-153">
+                                    <div class="style-154"><img alt="Charles Williams" loading="lazy" decoding="async" data-nimg="fill" class="style-155" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                    <div class="style-156">Principal Investigator</div>
+                                    <div class="style-157"></div>
+                                </div>
+                                <div class="style-158">
+                                    <h3 class="style-159">Charles Williams</h3>
+                                    <p class="style-160">Chief of Testing</p>
+                                    <p class="style-161">Illinois Department of Public Health</p>
+                                    <p class="style-162">Charles leads MAAGE's testing initiatives with precision and expertise, developing efficient and accurate methods for infectious disease detection.</p>
+                                </div>
+                                <div class="style-163">
+                                    <div class="style-164"><a href="mailto:charles.williams@idph.illinois.gov" class="style-165" aria-label="Email Charles Williams"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-166">
+                                                <rect width="20" height="16" x="2" y="4" rx="2" class="style-167"></rect>
+                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" class="style-168"></path>
+                                            </svg></a><a href="https://twitter.com/cwilliamsIDPH" target="_blank" rel="noopener noreferrer" class="style-169" aria-label="Charles Williams's Twitter profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-170">
+                                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" class="style-171"></path>
+                                            </svg></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-172">
+                            <div class="style-173">
+                                <div class="style-174">
+                                    <div class="style-175"><img alt="Maria Gonzalez" loading="lazy" decoding="async" data-nimg="fill" class="style-176" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                    <div class="style-177"></div>
+                                </div>
+                                <div class="style-178">
+                                    <h3 class="style-179">Maria Gonzalez</h3>
+                                    <p class="style-180">Epidemiology Director</p>
+                                    <p class="style-181">Illinois Department of Public Health</p>
+                                    <p class="style-182">Maria coordinates disease surveillance activities and outbreak investigations across the state.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-183">
+                            <div class="style-184">
+                                <div class="style-185">
+                                    <div class="style-186"><img alt="James Wilson" loading="lazy" decoding="async" data-nimg="fill" class="style-187" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                    <div class="style-188"></div>
+                                </div>
+                                <div class="style-189">
+                                    <h3 class="style-190">James Wilson</h3>
+                                    <p class="style-191">Laboratory Operations Manager</p>
+                                    <p class="style-192">Illinois Department of Public Health</p>
+                                    <p class="style-193">James oversees the public health laboratory operations and testing protocols for pathogen identification.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-194">
+                            <div class="style-195">
+                                <div class="style-196">
+                                    <div class="style-197"><img alt="Sophia Lee" loading="lazy" decoding="async" data-nimg="fill" class="style-198" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                    <div class="style-199"></div>
+                                </div>
+                                <div class="style-200">
+                                    <h3 class="style-201">Sophia Lee</h3>
+                                    <p class="style-202">Public Health Data Analyst</p>
+                                    <p class="style-203">Illinois Department of Public Health</p>
+                                    <p class="style-204">Sophia analyzes epidemiological data to identify trends and patterns in disease transmission.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-205">
+                            <div class="style-206">
+                                <div class="style-207">
+                                    <div class="style-208"><img alt="Daniel Martinez" loading="lazy" decoding="async" data-nimg="fill" class="style-209" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                    <div class="style-210"></div>
+                                </div>
+                                <div class="style-211">
+                                    <h3 class="style-212">Daniel Martinez</h3>
+                                    <p class="style-213">Molecular Diagnostics Specialist</p>
+                                    <p class="style-214">Illinois Department of Public Health</p>
+                                    <p class="style-215">Daniel develops and validates molecular testing methods for detecting infectious pathogens.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="style-216">
+                <div class="style-217">
+                    <div class="style-218">
+                        <div class="style-219"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-220">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" class="style-221"></path>
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" class="style-222"></path>
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" class="style-223"></path>
+                                <path d="M10 6h4" class="style-224"></path>
+                                <path d="M10 10h4" class="style-225"></path>
+                                <path d="M10 14h4" class="style-226"></path>
+                                <path d="M10 18h4" class="style-227"></path>
+                            </svg></div>
+                        <div class="style-228">
+                            <h2 class="style-229">University of Illinois</h2>
+                            <p class="style-230">Academic researchers and pathology experts</p>
+                        </div>
+                    </div>
+                    <div class="style-231">
+                        <div class="style-232">
+                            <div class="style-233">
+                                <div class="style-234"><img alt="Rebecca Smith, Ph.D." loading="lazy" decoding="async" data-nimg="fill" class="style-235" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-236">Principal Investigator</div>
+                                <div class="style-237"></div>
+                            </div>
+                            <div class="style-238">
+                                <h3 class="style-239">Rebecca Smith, Ph.D.</h3>
+                                <p class="style-240">Associate Professor of Pathology</p>
+                                <p class="style-241">University of Illinois</p>
+                                <p class="style-242">Dr. Smith brings expertise in pathology and molecular diagnostics, focusing on innovative approaches to disease detection and characterization.</p>
+                            </div>
+                            <div class="style-243">
+                                <div class="style-244"><a href="mailto:rsmith@illinois.edu" class="style-245" aria-label="Email Rebecca Smith, Ph.D."><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-246">
+                                            <rect width="20" height="16" x="2" y="4" rx="2" class="style-247"></rect>
+                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" class="style-248"></path>
+                                        </svg></a><a href="https://www.linkedin.com/in/rebecca-smith-phd" target="_blank" rel="noopener noreferrer" class="style-249" aria-label="Rebecca Smith, Ph.D.'s LinkedIn profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-250">
+                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" class="style-251"></path>
+                                            <rect width="4" height="12" x="2" y="9" class="style-252"></rect>
+                                            <circle cx="4" cy="4" r="2" class="style-253"></circle>
+                                        </svg></a><a href="https://github.com/rsmith-uiuc" target="_blank" rel="noopener noreferrer" class="style-254" aria-label="Rebecca Smith, Ph.D.'s GitHub profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="style-255">
+                                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" class="style-256"></path>
+                                            <path d="M9 18c-4.51 2-5-2-7-2" class="style-257"></path>
+                                        </svg></a></div>
+                            </div>
+                        </div>
+                        <div class="style-258">
+                            <div class="style-259">
+                                <div class="style-260"><img alt="John Thompson" loading="lazy" decoding="async" data-nimg="fill" class="style-261" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-262"></div>
+                            </div>
+                            <div class="style-263">
+                                <h3 class="style-264">John Thompson</h3>
+                                <p class="style-265">Assistant Professor of Microbiology</p>
+                                <p class="style-266">University of Illinois</p>
+                                <p class="style-267">John studies bacterial pathogens and their genomic characteristics to better understand antimicrobial resistance.</p>
+                            </div>
+                        </div>
+                        <div class="style-268">
+                            <div class="style-269">
+                                <div class="style-270"><img alt="Aisha Patel" loading="lazy" decoding="async" data-nimg="fill" class="style-271" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-272"></div>
+                            </div>
+                            <div class="style-273">
+                                <h3 class="style-274">Aisha Patel</h3>
+                                <p class="style-275">Research Scientist</p>
+                                <p class="style-276">University of Illinois</p>
+                                <p class="style-277">Aisha specializes in viral genomics and the evolution of respiratory pathogens like influenza and coronaviruses.</p>
+                            </div>
+                        </div>
+                        <div class="style-278">
+                            <div class="style-279">
+                                <div class="style-280"><img alt="Marcus Johnson" loading="lazy" decoding="async" data-nimg="fill" class="style-281" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-282"></div>
+                            </div>
+                            <div class="style-283">
+                                <h3 class="style-284">Marcus Johnson</h3>
+                                <p class="style-285">Postdoctoral Researcher</p>
+                                <p class="style-286">University of Illinois</p>
+                                <p class="style-287">Marcus investigates the genetic factors that influence pathogen transmissibility and virulence.</p>
+                            </div>
+                        </div>
+                        <div class="style-288">
+                            <div class="style-289">
+                                <div class="style-290"><img alt="Olivia Chen" loading="lazy" decoding="async" data-nimg="fill" class="style-291" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-292"></div>
+                            </div>
+                            <div class="style-293">
+                                <h3 class="style-294">Olivia Chen</h3>
+                                <p class="style-295">Graduate Research Assistant</p>
+                                <p class="style-296">University of Illinois</p>
+                                <p class="style-297">Olivia develops computational methods for analyzing pathogen genome sequences and identifying significant mutations.</p>
+                            </div>
+                        </div>
+                        <div class="style-298">
+                            <div class="style-299">
+                                <div class="style-300"><img alt="Kevin Park" loading="lazy" decoding="async" data-nimg="fill" class="style-301" src="/placeholder.svg?height=400&amp;width=400" /></div>
+                                <div class="style-302"></div>
+                            </div>
+                            <div class="style-303">
+                                <h3 class="style-304">Kevin Park</h3>
+                                <p class="style-305">Laboratory Manager</p>
+                                <p class="style-306">University of Illinois</p>
+                                <p class="style-307">Kevin oversees the genomic sequencing laboratory and ensures quality control for all samples processed for MAAGE.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="style-308">
+                <div class="style-309">
+                    <h2 class="style-310">Join Our Team</h2>
+                    <p class="style-311">We're always looking for talented individuals who are passionate about genomic epidemiology and public health. Explore current opportunities to join the MAAGE initiative.</p><a class="style-312" href="/careers">View Open Positions<svg class="style-313" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" class="style-314"></path>
+                        </svg></a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <amino-inspect class="style-315"></amino-inspect>
+    <next-route-announcer class="style-316"></next-route-announcer>
+    <div class="style-317">
+        <div class="style-318"></div>
+    </div>
+    <protonpass-root-6f3e data-protonpass-role="root" data-protonpass-theme="os" class="style-319"></protonpass-root-6f3e>
+</body>
+
 </html>
