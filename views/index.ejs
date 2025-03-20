@@ -11,28 +11,52 @@
 		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
 			<%- include('navbar') %>
 			<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="padding:0px;border:0px solid #ddd;background:inherit;">
+				<style>
+					#ApplicationContainer.layoutContainer {
+						overflow: auto !important;
+						overflow-y: auto !important;
+						overflow-x: auto !important;
+						position: relative !important;
+					}
+
+					#ApplicationContainer .App {
+						position: relative !important;
+						top: 55px !important;
+					}
+
+					#maage-home,
+					#maage-page {
+						position: relative !important;
+						top: 55px !important;
+					}
+				</style>
+				<style>
+					@media (min-width: 1024px) {
+			  div.relative.z-10.space-y-6 > div:nth-child(1) > h1.text-3xl.md/:text-4xl.lg\:text-5xl.font-semibold.text-secondary-900.mb-4.font-poppins.leading-tight {
+				font-size: 2.5rem;
+			  }
+			}
+
+			@media only screen and (min-width: 768px) {
+			  div.relative.z-10.space-y-6 > div:nth-child(1) > p.text-gray-700.mb-6.text-lg.max-w-3xl {
+				font-size: 16px;
+				font-weight: normal;
+			  }
+			}
+
+			div.flex.items-center.mb-6 > h2.text-2xl.font-semibold.text-secondary-800.font-poppins {
+			  font-size: 1.5rem;
+			}
+			@media (min-width: 1024px) {
+			  div.relative.z-10.space-y-6 > div:nth-child(1) > h1.text-3xl.md/:text-4xl.lg\:text-5xl.font-semibold.text-secondary-900.mb-4.font-poppins.leading-tight {
+				font-size: 2.5rem;
+			  }
+			}
+				</style>
                 <%- include('home') %>
             </div>
 		</div>
 		<%- include('javascript') %>
 	</body>
-	<style>
-		#ApplicationContainer.layoutContainer {
-			overflow: auto !important;
-			overflow-y: auto !important;
-			overflow-x: auto !important;
-			position: relative !important;
-		}
 
-		#ApplicationContainer .App {
-			position: relative !important;
-			top: 55px !important;
-		}
-
-		#maage-home,
-		#maage-page {
-			position: relative !important;
-			top: 55px !important;
-		}
-	</style>
 </html>
