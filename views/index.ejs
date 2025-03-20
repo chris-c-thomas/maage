@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
-		<title>Midwest Alliance for Applied Genomic Epidemiology | MAAGE</title>
-		<%- include('head') %>
-	  </head>
+		<title>Bacterial and Viral Bioinformatics Resource Center | BV-BRC</title>
+		<%- include('header') %>
+	</head>
+
 	<body class="claro patric <% if (request.isAuthenticated && request.isAuthenticated()) { %>Authenticated<% } %>">
-		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer" data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
-			<%- include('maage-brc-navbar') %>
-			<div style="padding:0px;border:0px solid #ddd;" class="bg-[var(--background-color)]">
-                <%- include('home') %>
-            </div>
+		<div id="ApplicationContainer" data-dojo-type="dijit/layout/BorderContainer" class="layoutContainer"
+			data-dojo-props="id:'ApplicationContainer',gutters:false,liveSplitters:false">
+			<%- include('navbar') %>
+			<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"
+				style="padding:0px;border:0px solid #ddd;background:inherit;">
+				<%- include('home') %>
+			</div>
 		</div>
 		<%- include('javascript') %>
-		<script>
-			// Initialize Lucide icons
-			lucide.createIcons();
-		</script>
 	</body>
-	<style>
-		#ApplicationContainer.layoutContainer {
-			overflow: auto !important;
-			overflow-y: auto !important;
-			overflow-x: auto !important;
-			position: relative !important;
-		}
-		#maage-home,
-		#maage-page {
-			position: relative;
-			top: 35px;
-		}
-		#ApplicationContainer .WorkspaceController {
-			display: none;
-		}
-	</style>
+
 </html>
