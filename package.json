@@ -1,9 +1,11 @@
 {
   "name": "p3-web",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/p3-web",
+    "dev:css": "tailwindcss -i ./public/css/maage/maage-tw3.css -o ./public/css/maage/maage-tw3-output.css --watch",
+    "build:css": "tailwindcss -i ./public/css/maage/maage-tw3.css -o ./public/css/maage/maage-tw3-output.min.css --minify",
     "test": "cross-env NODE_ENV=test gulp srcfiles && npm run move-src && eslint . && jest --config jest.config.json --notify",
     "move-src": "cp gulpified/app/app.js src/app/ && cp gulpified/app/p3app.js src/app/ && cp gulpified/widget/LoginForm.js src/widget",
     "xxxeslint:fix": "./node_modules/eslint/bin/eslint.js --fix public/js/p3",

@@ -1,3 +1,9 @@
+@import './fonts.css';
+@import './custom-utilities.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --primary-color: #a6c9b8;
     --primary-50: #f2f8f5;
