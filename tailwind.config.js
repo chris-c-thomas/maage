@@ -10,7 +10,13 @@ module.exports = {
     "./routes/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        inter: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        jetbrains: ['JetBrains Mono', 'Fira Code', 'Courier New', 'Courier', 'monospace'],
+      }
+    },
   },
   plugins: [],
 }
