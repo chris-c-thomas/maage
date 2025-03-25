@@ -1,19 +1,17 @@
 <div data-dojo-type="dijit/layout/ContentPane" class="HeaderBar maage-navbar" data-dojo-props="region:'top'">
-    <style>
 
-    </style>
     <div id="maage-navbar">
         <div id="bv-brc-header" class="P3Header" role="heading" aria-level="1">
 
             <div id="bv-brc-header-container">
                 <div class="nav-logo">
-                    <div class="logo cursor-pointer" style="display: flex; align-items: center;">
-                        <a href="/" style="display: flex; align-items: center;" class="hover:scale-110 transition-transform duration-200 hover:cursor-pointer"></a>
-                            <span><img src="/patric/images/maage/maage-logo.png" alt="MAAGE Logo" style="width: 40px; height: auto; margin-right: 10px;" /></span>
-                            <span class="font-poppins font-medium text-[38px] text-[var(--maage-secondary-600)]">MA</span>
-                            <span class="font-poppins font-light ml-[2px] text-[38px] text-[var(--maage-secondary-800)]">AGE</span>
-                        </a>
-                      </div>
+                    <a class="nav-logo-link min-x-50" href="/">
+                        <img class="h-[40px] mt-[10px] text-[var(--maage-secondary-500)]" src="/patric/images/maage/maage-logo.png" alt="Midwest Alliance for Applied Genomic Epidemiology (MAAGE) Logo">
+                        <span class="font-poppins font-light text-[42px] text-[var(--maage-secondary-700)]">MA</span>
+                        <span class="font-poppins font-semibold text-[42px] text-[var(--maage-secondary-500)]">AGE</span>
+                        <span><i style="color: #fafafa; font-size: 12px; padding-left: 2px;" class="text-[var(--maage-tertiary-500)]"><i>v.</i><%- request.package.version %><%- request.applicationOptions.appLabel || " " %></i></i></span>
+                        <span><i style="font-size: 14px; padding-left: 6px;"><%- request.applicationOptions.appLabel || " " %></i></i></span>
+                    </a>
                 </div>
 
 
