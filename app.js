@@ -103,10 +103,12 @@ const staticHeaders = {
 
 app.use('/js/' + packageJSON.version + '/', [
   express.static(path.join(__dirname, 'public/js/release/'), staticHeaders),
-  express.static(path.join(__dirname, 'public/js/'),staticHeaders)
+  express.static(path.join(__dirname, 'public/js/'),staticHeaders),
+  express.static(path.join(__dirname, 'public/css/'),staticHeaders)
 ]);
 
 app.use('/js/', express.static(path.join(__dirname, 'public/js/')));
+app.use('/css/', express.static(path.join(__dirname, 'public/css/')));
 app.use('/patric/images', express.static(path.join(__dirname, 'public/patric/images/'), {
   maxage: '365d',
   setHeaders: function (res, path) {
